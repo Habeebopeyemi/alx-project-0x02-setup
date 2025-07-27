@@ -55,3 +55,8 @@ export interface UserModalProps {
   onClose: () => void;
   onSubmit: (post: UserProps) => void;
 }
+
+export interface CardProps {
+  title: string;
+  content: string;
+}
