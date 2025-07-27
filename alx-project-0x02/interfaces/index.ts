@@ -39,7 +39,7 @@ export interface PostData {
   userId: number;
   id?: number;
   title: string;
-  body: string;
+  content: string;
 }
 
 export interface PostModalProps {

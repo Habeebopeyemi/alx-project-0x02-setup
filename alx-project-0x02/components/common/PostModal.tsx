@@ -5,7 +5,7 @@ const PostModal: React.FC<PostModalProps> = ({ onClose, onSubmit }) => {
   const [post, setPost] = useState<PostData>({
     userId: 1,
     title: "",
-    body: "",
+    content: "",
   });
 
   const handleChange = (
@@ -30,21 +30,6 @@ const PostModal: React.FC<PostModalProps> = ({ onClose, onSubmit }) => {
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
-              htmlFor="userId"
-              className="block text-gray-700 font-medium mb-2">
-              User ID
-            </label>
-            <input
-              type="number"
-              id="userId"
-              name="userId"
-              value={post.userId}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <div className="mb-4">
-            <label
               htmlFor="title"
               className="block text-gray-700 font-medium mb-2">
               Title
@@ -61,14 +46,14 @@ const PostModal: React.FC<PostModalProps> = ({ onClose, onSubmit }) => {
           </div>
           <div className="mb-4">
             <label
-              htmlFor="body"
+              htmlFor="content"
               className="block text-gray-700 font-medium mb-2">
-              Body
+              Content
             </label>
             <textarea
-              id="body"
-              name="body"
-              value={post.body}
+              id="content"
+              name="content"
+              value={post.content}
               onChange={handleChange}
               rows={4}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
