@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "@/components/common/Button";
+import Header from "@/components/layout/Header";
 import { type PostData } from "@/interfaces";
 
 const about = () => {
@@ -11,6 +12,7 @@ const about = () => {
   });
   return (
     <div>
+      <Header />
       <Button size="small" shape="rounded-sm">
         Small Button
       </Button>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "@/components/common/Card";
+import Header from "@/components/layout/Header";
 import { type CardProps } from "@/interfaces";
 
 const home = () => {
@@ -9,6 +10,7 @@ const home = () => {
   };
   return (
     <div>
+      <Header />
       <h1>home</h1>
       <Card title={cardData.title} content={cardData.content} />
     </div>
