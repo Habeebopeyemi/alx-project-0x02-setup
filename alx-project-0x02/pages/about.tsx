@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Card from "@/components/common/Card";
-import PostModal from "@/components/common/PostModal";
+import Button from "@/components/common/Button";
 import { type PostData } from "@/interfaces";
 
 const about = () => {
@@ -10,27 +9,17 @@ const about = () => {
     title: "",
     content: "",
   });
-
-  const handleAddPost = (newPost: PostData) => {
-    setPost({ ...newPost, id: Math.floor(Math.random() * 1000) + 1 });
-  };
   return (
     <div>
-      <h1>about</h1>
-      <div>
-        <Card title={post?.title} content={post?.content} />
-        <button
-          onClick={() => setModalOpen(true)}
-          className="bg-blue-700 px-4 py-2 rounded-full text-white">
-          Add Post
-        </button>
-      </div>
-      {isModalOpen && (
-        <PostModal
-          onClose={() => setModalOpen(false)}
-          onSubmit={handleAddPost}
-        />
-      )}
+      <Button size="small" shape="rounded-sm">
+        Small Button
+      </Button>
+      <Button size="medium" shape="rounded-md">
+        Medium Button
+      </Button>
+      <Button size="large" shape="rounded-full">
+        Large Button
+      </Button>
     </div>
   );
 };
