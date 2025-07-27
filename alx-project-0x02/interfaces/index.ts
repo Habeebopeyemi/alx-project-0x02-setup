@@ -60,3 +60,8 @@ export interface CardProps {
   title: string;
   content: string;
 }
+
+export interface ButtonProps {
+  sizes: string;
+  shapes: string;
+}
